@@ -11,6 +11,9 @@ export const TitleContainer = styled.h1`
   margin-bottom: 25px;
   cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  
   &:hover {
     color: grey;
   }

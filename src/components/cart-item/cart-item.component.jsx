@@ -6,16 +6,18 @@ import {
   CartItemImage
 } from './cart-item.styles';
 
-const CartItem = ({ item: { imageUrl, price, name, quantity } }) => (
-  <CartItemContainer>
-    <CartItemImage src={imageUrl} alt='item' />
+const CartItem = ({ item }) => {
+  console.log({item});
+  return (
+  <CartItemContainer key={item?.id}>
+    {<CartItemImage src={item?.images[0]} alt='item' />}
     <ItemDetailsContainer>
-      <span>{name}</span>
+      <span>{item.item_name}</span>
       <span>
-        {quantity} x ${price}
+        {item.quantity} x ${item.price}
       </span>
     </ItemDetailsContainer>
   </CartItemContainer>
-);
+)};
 
 export default CartItem;

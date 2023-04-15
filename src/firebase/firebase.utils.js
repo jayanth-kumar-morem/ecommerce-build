@@ -2,15 +2,17 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-const config = {
-  apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
-  authDomain: 'crwn-db.firebaseapp.com',
-  databaseURL: 'https://crwn-db.firebaseio.com',
-  projectId: 'crwn-db',
-  storageBucket: 'crwn-db.appspot.com',
-  messagingSenderId: '850995411664',
-  appId: '1:850995411664:web:7ddc01d597846f65'
-};
+// const config = {
+//   apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
+//   authDomain: 'crwn-db.firebaseapp.com',
+//   databaseURL: 'https://crwn-db.firebaseio.com',
+//   projectId: 'crwn-db',
+//   storageBucket: 'crwn-db.appspot.com',
+//   messagingSenderId: '850995411664',
+//   appId: '1:850995411664:web:7ddc01d597846f65'
+// };
+
+const config = {  apiKey: "AIzaSyDtd6E5L9qj1e3oV0JKFw8n7O_sinztRSM",  authDomain: "hackverse-b196b.firebaseapp.com",  projectId: "hackverse-b196b",  storageBucket: "hackverse-b196b.appspot.com",  messagingSenderId: "403514499292",  appId: "1:403514499292:web:a05fa51d3dd9fdc1c5d419"};
 
 firebase.initializeApp(config);
 

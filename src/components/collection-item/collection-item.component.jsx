@@ -12,15 +12,16 @@ import {
   PriceContainer
 } from './collection-styles.styles';
 
+
 const CollectionItem = ({ item, addItem }) => {
-  const { name, price, imageUrl } = item;
+  const { short_desc, mrp, images } = item;
 
   return (
     <CollectionItemContainer>
-      <BackgroundImage className='image' imageUrl={imageUrl} />
+      <BackgroundImage className='image' imageUrl={images?.length ? images[0] : "" } />
       <CollectionFooterContainer>
-        <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
+        <NameContainer>{short_desc.substring(0, 20)} {short_desc.length >= 20 && '...'}</NameContainer>
+        <PriceContainer>{mrp}</PriceContainer>
       </CollectionFooterContainer>
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart

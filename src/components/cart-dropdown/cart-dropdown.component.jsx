@@ -14,7 +14,9 @@ import {
   CartItemsContainer
 } from './cart-dropdown.styles';
 
-const CartDropdown = ({ cartItems, history, dispatch }) => (
+const CartDropdown = ({ cartItems, history, dispatch }) => {
+  console.log(cartItems);
+  return(
   <CartDropdownContainer>
     <CartItemsContainer>
       {cartItems.length ? (
@@ -34,7 +36,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
       GO TO CHECKOUT
     </CartDropdownButton>
   </CartDropdownContainer>
-);
+)};
 
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems
