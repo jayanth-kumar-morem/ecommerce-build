@@ -45,8 +45,8 @@ class ShopPage extends React.Component {
   fetchDataFromFirestore = async () => {
     const { updateCollections } = this.props;
     const { lastVisible } = this.state;
-    // let ondcCatalogRef = firestore.collection('ondcCatalog').orderBy('business_id').limit(this.itemsPerPage);
-    let ondcCatalogRef = firestore.collection('ondcCatalog').orderBy('business_id');
+    let ondcCatalogRef = firestore.collection('ondcCatalog').orderBy('business_id').limit(this.itemsPerPage);
+    // let ondcCatalogRef = firestore.collection('ondcCatalog').orderBy('business_id');
   
     if (lastVisible) {
       ondcCatalogRef = ondcCatalogRef.startAfter(lastVisible);
